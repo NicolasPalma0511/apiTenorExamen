@@ -66,4 +66,7 @@ app.MapPost("/recommendations", async (HttpRequest request) =>
     return Results.Content(result, "application/json");
 });
 
+// Agregar el endpoint de health check
+app.MapGet("/health", () => Results.Ok("Service is running"));
+
 app.Run();
